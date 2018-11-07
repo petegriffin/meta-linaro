@@ -2,18 +2,17 @@ SUMMARY = "OPTEE Client"
 HOMEPAGE = "https://github.com/OP-TEE/optee_client"
 
 LICENSE = "BSD"
-LIC_FILES_CHKSUM = "file://${S}/LICENSE;md5=a6d62e1b5fef18a1854bd538e3160d7c"
+LIC_FILES_CHKSUM = "file://${S}/LICENSE;md5=69663ab153298557a59c67a60a743e5b"
 
-PV = "2.4.0+git${SRCPV}"
+PV = "3.3.0+git${SRCPV}"
 
 inherit pythonnative systemd
 
 SRC_URI = "git://github.com/OP-TEE/optee_client.git \
-           file://0001-Respect-LDFLAGS-set-from-OE-build.patch \
            file://tee-supplicant.service"
 S = "${WORKDIR}/git"
 
-SRCREV = "1df4046bd729e866743454a18a71e72228e585fd"
+SRCREV = "c48bc3be9f23529952c7dd80ddd775bf580315b8"
 
 SYSTEMD_SERVICE_${PN} = "tee-supplicant.service"
 
